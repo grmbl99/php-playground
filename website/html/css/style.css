@@ -1,0 +1,131 @@
+body {
+  margin: 0;
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+}
+a {
+  color: rgb(80, 62, 55);
+  text-decoration: none;
+}
+/* image header at top of the page sizes to fit the width of the page */
+#header {
+  position: relative;
+  background-color: white;
+  z-index: 10;
+  top: 0;
+}
+#header img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 100%;
+  height: auto;
+}
+/* part of the header that always stays visible (sticky) at the top of the page */
+#sticky_header {
+  position: sticky;
+  width: 80%;
+  left: 10%;
+  top: 0;
+  z-index: 9;
+}
+/* margin-bottom to prevent overlap with (fixed) footer */
+/* margin-top to allow room for menubar */
+#content {
+  margin-top: 130px;
+  margin-bottom: 70px;
+  display: grid;
+  gap: 130px;
+}
+/* the page content can have multiple sections containing: header (h1), text (p) and image_box */
+.section {
+  position: relative;
+  width: 85%;
+  margin-left: 4%;
+  min-height: 300px;
+  background-color: rgb(237, 233, 225);
+  box-shadow: 5px 5px 5px grey;
+}
+.small {
+  min-height: 230px;
+}
+/* h1 is placed outside (above) the section */
+.section h1 {
+  position: absolute;
+  font-size: 2em;
+  top: -100px;
+  left: 10px;
+}
+/* position paragraph inside the section, leaving room to the right for the image_box */
+.section p {
+  margin: 10px 400px 20px 10px;
+  font-size: 1em;
+}
+/* the image_box is placed overlapping on the top-right of the section */
+.image_box {
+  position: absolute;
+  right: -7%;
+  top: -100px;
+}
+/* class="landscape" images have fixed width and scale in height */
+.image_box img.landscape {
+  display: block;
+  width: 400px;
+  height: auto;
+  max-height: 300px;
+  object-fit: contain;
+  /*border-radius: 10%;*/
+  background-color: rgb(199, 199, 199);
+  box-shadow: 5px 5px 5px grey;
+}
+/* class="portrait" images have fixed height and scale in width */
+.image_box img.portrait {
+  display: block;
+  height: 300px;
+  width: auto;
+  max-width: 400px;
+  object-fit: contain;
+  /* border-radius: 10%;*/
+  background-color: rgb(199, 199, 199);
+  box-shadow: 5px 5px 5px grey;
+}
+/* text under the image */
+.image_box .image_text {
+  position: absolute;
+  font-size: 0.8em;
+  bottom: -25px;
+}
+/* fixed footer with centered copyright text */
+#footer {
+  background-color: lightblue;
+  position: fixed;
+  bottom: 0;
+  left: 10%;
+  z-index: 8;
+  height: 50px;
+  width: 80%;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  border-radius: 30px 30px 0px 0px; 
+}
+#footer .copyright {
+  color: white;
+  font-size: 1em;
+  text-align: center;
+}
+/* tables have the same margins as <p> */
+table {
+  margin: 10px 400px 20px 10px;
+  font-size: 1em;
+  border-collapse: collapse;
+  box-shadow: 1px 1px 3px grey;
+}
+
+td,
+th {
+  border: 1px solid rgb(215, 180, 98);
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: rgb(225, 208, 164);
+}
