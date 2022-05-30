@@ -2,3 +2,4 @@ database/db
 website/html/images
 database/mssqldb
 *PASSWORD
+.DS_Store
