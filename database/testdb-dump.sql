@@ -20,6 +20,9 @@ CREATE TABLE `diners` (
   `id` int NOT NULL AUTO_INCREMENT,
   `title` text NOT NULL,
   `description` text NOT NULL,
+  `datum` text NOT NULL,
+  `foto` text NOT NULL,
+  `bijschrift` text NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
@@ -36,5 +39,5 @@ UNLOCK TABLES;
 --
 
 LOCK TABLES `diners` WRITE;
-INSERT INTO `diners` VALUES (1,'taak 1','bla bla'),(2,'taak 2','bla bla'),(3,'taak 3','fdssdfsdfsdf');
+INSERT INTO `diners` VALUES (1,'taak 1','bla bla','10-dec-2020','test','bla'),(2,'taak 2','bla bla','13-12-2022','test','bla'),(3,'taak 3','fdssdfsdfsdf','9-jan-2021','test','bla');
 UNLOCK TABLES;
